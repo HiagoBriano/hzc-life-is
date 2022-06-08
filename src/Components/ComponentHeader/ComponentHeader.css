@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'icones';
+  src: url(./font/icones.ttf);
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #15191c;
+  padding: 8px 16px;
+  box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.16);
+}
+
+.cabecalho__menu i::before {
+  font-family: 'icones';
+  content: '\e904';
+  font-size: 24px;
+}
+
+.cabecalho__notificacao i::before {
+  font-family: 'icones';
+  content: '\e906';
+  font-size: 24px;
+}
+
+.cabecalho__logo {
+  width: 40px;
+}
+
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  background-color: #15191c;
+  width: 75vw;
+  height: 100vh;
+  position: absolute;
+  left: -100vw;
+  transition: all ease .70s;
+}
+
+.menu-lateral--ativo {
+  left: 0;
+}
+
+.menu-lateral__logo {
+  width: 118px;
+  align-self: center;
+  padding: 16px;
+}
+
+.menu-lateral__link {
+  height: 64px;
+  color: #95999c;
+  padding-left: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-lateral__link--ativo {
+  color: aliceblue;
+  padding-left: 56px;
+  border-left: 8px solid #FFFFFF;
+}
+
+.menu-lateral__link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  position: absolute;
+  left: 24px;
+}
+
+.menu-lateral__link--inicio::before {
+  font-family: 'icones';
+  content: '\e902';
+}
+
+.menu-lateral__link--videos::before {
+  font-family: 'icones';
+  content: '\e90e';
+}
+
+.menu-lateral__link--picos::before {
+  font-family: 'icones';
+  content: '\e909';
+}
+
+.menu-lateral__link--integrantes::before {
+  font-family: 'icones';
+  content: '\e903';
+}
+
+.menu-lateral__link--camisas::before {
+  font-family: 'icones';
+  content: '\e900';
+}
+
+.menu-lateral__link--pinturas::before {
+  font-family: 'icones';
+  content: '\e90a';
+}
