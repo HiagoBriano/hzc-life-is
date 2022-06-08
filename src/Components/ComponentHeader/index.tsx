@@ -88,6 +88,7 @@ export default function ComponentHeader({ pagina }: IProps) {
           />
           {sites.map((atual) => (
             <a
+              key={atual.nome}
               href={atual.link}
               className={`menu-lateral__link ${atual.icone} ${
                 atual.nome === pagina ? 'menu-lateral__link--ativo' : null
