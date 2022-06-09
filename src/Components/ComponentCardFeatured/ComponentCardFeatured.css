@@ -47,6 +47,12 @@
   margin-right: 8px;
 }
 
+.cartao__info--sifrao::before {
+  font-family: 'icones';
+  content: '\e905';
+  margin-right: 8px;
+}
+
 .cartao__botao {
   display: flex;
   justify-content: center;
@@ -61,6 +67,12 @@
 .cartao__botao--play::before {
   font-family: 'icones';
   content: '\e90b';
+  font-size: 24px;
+}
+
+.cartao__botao--carrinho::before {
+  font-family: 'icones';
+  content: '\e901';
   font-size: 24px;
 }
 

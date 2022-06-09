@@ -1,40 +1,40 @@
 import React from 'react';
-import ComponentFeaturedVideo from '../../Components/ComponentFeaturedVideo';
+import ComponentCardFeatured from '../../Components/ComponentCardFeatured';
 import ComponentHeader from '../../Components/ComponentHeader';
 import './Home.css';
 import bannerMobile1 from './images/banner-mobile_1.png';
+import bannerMobile2 from './images/banner-mobile_2.png';
 
 export default function Home() {
   document.title = 'HZC | Home';
 
-  const videosDestacados = [
-    {
-      imagem: bannerMobile1,
-      descricao: 'Banner do cartão',
-      destaque: 'Vídeo em destaque',
-      titulo: 'HZC - Titulo',
-      perfil: 'Bruno Lopez',
-      tempo: 33,
-      visualizacao: 33,
-    },
-  ];
   return (
     <>
       <ComponentHeader pagina="Inicio" />
 
       <main className="principal">
         <h2 className="titulo-pagina">Início</h2>
-        {videosDestacados.map((atual) => (
-          <ComponentFeaturedVideo
-            imagem={atual.imagem}
-            descricao={atual.descricao}
-            destaque={atual.destaque}
-            titulo={atual.titulo}
-            perfil={atual.perfil}
-            tempo={atual.tempo}
-            visualizacao={atual.visualizacao}
-          />
-        ))}
+        <ComponentCardFeatured
+          cartao="video"
+          imagem={bannerMobile1}
+          descricao="Banner do cartão"
+          destaque="Vídeo em destaque"
+          titulo="HZC - Titulo"
+          perfil="Bruno Lopez"
+          quantidade={Math.floor(Math.random() * 100 + 1)}
+          visualizacao={Math.floor(Math.random() * 100 + 1)}
+        />
+
+        <ComponentCardFeatured
+          cartao="venda"
+          imagem={bannerMobile2}
+          descricao="Banner Nova arte"
+          destaque="Nova arte"
+          titulo="Only Zikas - Lagoa Dompa Club"
+          perfil="Bruno Lopez"
+          quantidade={+(Math.random() * 100 + 1).toFixed(2)}
+          visualizacao={Math.floor(Math.random() * 100 + 1)}
+        />
       </main>
     </>
   );
