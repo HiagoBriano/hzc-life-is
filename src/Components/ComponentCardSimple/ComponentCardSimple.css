@@ -3,57 +3,57 @@
   src: url(../../font/icones.ttf);
 }
 
-.cartao-destaque {
+.cartao {
   width: 100%;
   border-radius: 15px;
   overflow: hidden;
   background-color: #2c343a;
 }
 
-.cartao-destaque__conteudo {
+.cartao__conteudo {
   padding: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 15px;
 }
 
-.cartao-destaque__titulo {
+.cartao__titulo {
   font-size: 1.2rem;
   font-weight: 700;
   grid-column: span 2;
 }
 
-.cartao-destaque__perfil {
+.cartao__perfil {
   color: #95999c;
   font-size: 0.9rem;
   grid-column: span 2;
 }
 
-.cartao-destaque__info {
+.cartao__info {
   display: flex;
   align-items: center;
   color: #95999c;
 }
 
-.cartao-destaque__info--tempo::before {
-  font-family: 'icones';
-  content: '\e90c';
-  margin-right: 8px;
-}
-
-.cartao-destaque__info--visualizacao::before {
-  font-family: 'icones';
-  content: '\e90f';
-  margin-right: 8px;
-}
-
-.cartao-destaque__info--sifrao::before {
+.cartao__info--sifrao::before {
   font-family: 'icones';
   content: '\e905';
   margin-right: 8px;
 }
 
-.cartao-destaque__botao {
+.cartao__info--tempo::before {
+  font-family: 'icones';
+  content: '\e90c';
+  margin-right: 8px;
+}
+
+.cartao__info--visualizacao::before {
+  font-family: 'icones';
+  content: '\e90f';
+  margin-right: 8px;
+}
+
+.cartao__botao {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,29 +62,23 @@
   height: 40px;
   border-radius: 10px;
   font-size: 0.9rem;
+  justify-self: flex-end;
 }
 
-.cartao-destaque__botao--play::before {
-  font-family: 'icones';
-  content: '\e90b';
-  font-size: 24px;
-}
-
-.cartao-destaque__botao--carrinho::before {
+.cartao__botao--carrinho::before {
   font-family: 'icones';
   content: '\e901';
   font-size: 24px;
 }
 
-.cartao-destaque__botao--destaque {
-  width: 100%;
-  grid-column: span 2;
+.cartao__botao--play::before {
+  font-family: 'icones';
+  content: '\e90b';
+  font-size: 24px;
 }
 
-.cartao-destaque__botao--destaque::before {
-  margin-right: 8px;
-}
-
-.cartao-destaque__destaque {
-  grid-column: span 2;
+.cartao__botao--pico::before {
+  font-family: 'icones';
+  content: '\e908';
+  font-size: 24px;
 }
