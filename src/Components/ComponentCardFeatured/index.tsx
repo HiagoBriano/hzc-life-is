@@ -1,16 +1,5 @@
-import React from 'react';
+import { IPropsCardFeatured } from '../../interface';
 import './ComponentCardFeatured.css';
-
-interface IProps {
-  cartao: 'venda' | 'video';
-  imagem: string;
-  descricao: string;
-  destaque: string;
-  titulo: string;
-  perfil: string;
-  quantidade: number;
-  visualizacao: number;
-}
 
 export default function ComponentCardFeatured({
   cartao,
@@ -21,7 +10,7 @@ export default function ComponentCardFeatured({
   perfil,
   quantidade,
   visualizacao,
-}: IProps) {
+}: IPropsCardFeatured) {
   return (
     <>
       <article className="cartao-destaque">

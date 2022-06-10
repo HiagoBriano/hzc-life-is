@@ -1,14 +1,5 @@
-import React from 'react';
+import { IPropsCardSimple } from '../../interface';
 import './ComponentCardSimple.css';
-
-interface IProps {
-  cartao: 'venda' | 'video' | 'pico';
-  imagem: string;
-  descricao: string;
-  titulo: string;
-  perfil: string;
-  quantidade: number;
-}
 
 export default function ComponentCardSimple({
   cartao,
@@ -17,7 +8,7 @@ export default function ComponentCardSimple({
   titulo,
   perfil,
   quantidade,
-}: IProps) {
+}: IPropsCardSimple) {
   return (
     <>
       <article className="cartao">
