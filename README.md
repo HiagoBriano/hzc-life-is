@@ -44,3 +44,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Comando para executar o docker
+
+docker image build -t hzc-life-is:v1 .
+
+docker run -dit -p 3010:80 --name hzc-life-is hzc-life-is:v1
