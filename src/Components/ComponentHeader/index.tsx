@@ -30,6 +30,7 @@ export default function ComponentHeader({ pagina }: IProps) {
           <i></i>
         </button>
         <img className="cabecalho__logo" src={logo} alt="logotipo da HZC" />
+        <p className="cabecalho__notificacao">Bruno Lopes</p>
         <button
           className="cabecalho__notificacao"
           area-aria-label="Notificação"

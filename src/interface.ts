@@ -16,4 +16,11 @@
   perfil: string;
   quantidade: number;
   visualizacao: number;
+  }
+
+export interface IVideosRecentes {
+    imagem: string;
+    alt: string;
+    titulo: string;
+    perfil: string;
 }

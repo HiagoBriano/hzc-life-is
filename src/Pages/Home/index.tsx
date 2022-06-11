@@ -1,10 +1,12 @@
 import ComponentCardFeatured from '../../Components/ComponentCardFeatured';
+import ComponentCardRecent from '../../Components/ComponentCardRecent';
 import ComponentCardSimple from '../../Components/ComponentCardSimple';
 import ComponentHeader from '../../Components/ComponentHeader';
-import { camisas, videos } from './Data';
+import { camisas, novasArtes, videos, videosRecentes } from './Data';
 import './Home.css';
 import bannerMobile1 from './images/banner-mobile_1.png';
 import bannerMobile2 from './images/banner-mobile_2.png';
+// import { IVideosRecentes } from '../../interface';
 
 export default function Home() {
   document.title = 'HZC | Home';
@@ -15,6 +17,7 @@ export default function Home() {
 
       <main className="principal">
         <h2 className="titulo-pagina">Início</h2>
+
         <ComponentCardFeatured
           cartao="video"
           imagem={bannerMobile1}
@@ -24,6 +27,12 @@ export default function Home() {
           perfil="Bruno Lopez"
           quantidade={Math.floor(Math.random() * 100 + 1)}
           visualizacao={Math.floor(Math.random() * 100 + 1)}
+        />
+
+        <ComponentCardRecent
+          tituloPrincipal="Vídeos recentes"
+          LinkVerTodos="/"
+          videosRecentes={videosRecentes}
         />
 
         <section className="secao">
@@ -40,6 +49,12 @@ export default function Home() {
             />
           ))}
         </section>
+
+        <ComponentCardRecent
+          tituloPrincipal="Novas Artes"
+          LinkVerTodos="/"
+          videosRecentes={novasArtes}
+        />
 
         <ComponentCardFeatured
           cartao="venda"
