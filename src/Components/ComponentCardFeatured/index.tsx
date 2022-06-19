@@ -4,6 +4,7 @@ import './ComponentCardFeatured.css';
 export default function ComponentCardFeatured({
   cartao,
   imagem,
+  imagemMobile,
   descricao,
   destaque,
   titulo,
@@ -13,8 +14,17 @@ export default function ComponentCardFeatured({
 }: IPropsCardFeatured) {
   return (
     <>
-      <article className="cartao-destaque">
-        <img src={imagem} alt={descricao} className="cartao-destaque__imagem" />
+      <article className={`cartao-destaque cartao-destaque__${cartao}`}>
+        <img
+          src={imagem}
+          alt={descricao}
+          className="cartao-destaque__imagem cartao-destaque__imagem--desktop"
+        />
+        <img
+          src={imagemMobile || imagem}
+          alt={descricao}
+          className="cartao-destaque__imagem cartao-destaque__imagem--mobile"
+        />
         <div className="cartao-destaque__conteudo">
           <p className="cartao-destaque__destaque">{destaque}</p>
           <h3 className="cartao-destaque__titulo">{titulo}</h3>

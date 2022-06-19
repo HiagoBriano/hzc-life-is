@@ -1,9 +1,19 @@
 import { IVideosRecentes } from '../../interface';
 import './ComponentCardRecent.css';
 
-export default function ComponentCardRecent({ tituloPrincipal, LinkVerTodos, videosRecentes }: { tituloPrincipal: string, LinkVerTodos: string, videosRecentes: IVideosRecentes[] }) {
+export default function ComponentCardRecent({
+  cartao,
+  tituloPrincipal,
+  LinkVerTodos,
+  videosRecentes,
+}: {
+  cartao: 'venda' | 'video';
+  tituloPrincipal: string;
+  LinkVerTodos: string;
+  videosRecentes: IVideosRecentes[];
+}) {
   return (
-    <article className="cartao-recente">
+    <article className={`cartao-recente cartao-recente__${cartao}`}>
       <h3 className="cartao-recente__titulo">{tituloPrincipal}</h3>
       <a href={LinkVerTodos} className="cartao-recente__link">
         Ver todos

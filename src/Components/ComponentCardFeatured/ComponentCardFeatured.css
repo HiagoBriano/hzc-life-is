@@ -88,3 +88,30 @@
 .cartao-destaque__destaque {
   grid-column: span 2;
 }
+
+.cartao-destaque__imagem--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .cartao-destaque__imagem--desktop {
+    display: block;
+  }
+
+  .cartao-destaque__imagem--mobile {
+    display: none;
+  }
+
+  .cartao-destaque__botao {
+    grid-column: auto;
+    padding: 16px 8px;
+  }
+
+  .cartao-destaque__video {
+    grid-area: destaque-video;
+  }
+
+  .cartao-destaque__venda {
+    grid-area: destaque-venda;
+  }
+}

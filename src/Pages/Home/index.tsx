@@ -6,13 +6,15 @@ import { camisas, novasArtes, videos, videosRecentes } from './Data';
 import './Home.css';
 import bannerMobile1 from './images/banner-mobile_1.png';
 import bannerMobile2 from './images/banner-mobile_2.png';
+import banner1 from './images/banner_1.png';
+import banner2 from './images/banner_2.png';
 // import { IVideosRecentes } from '../../interface';
 
 export default function Home() {
   document.title = 'HZC | Home';
 
   return (
-    <>
+    <div className="all">
       <ComponentHeader pagina="Inicio" />
 
       <main className="principal">
@@ -20,7 +22,8 @@ export default function Home() {
 
         <ComponentCardFeatured
           cartao="video"
-          imagem={bannerMobile1}
+          imagem={banner1}
+          imagemMobile={bannerMobile1}
           descricao="Banner do cartão"
           destaque="Vídeo em destaque"
           titulo="HZC - Titulo"
@@ -30,12 +33,13 @@ export default function Home() {
         />
 
         <ComponentCardRecent
+          cartao="video"
           tituloPrincipal="Vídeos recentes"
           LinkVerTodos="/"
           videosRecentes={videosRecentes}
         />
 
-        <section className="secao">
+        <section className="secao secao__videos">
           <h3 className="secao__titulo">Vídeos mais vistos</h3>
 
           {videos.map((atual) => (
@@ -51,6 +55,7 @@ export default function Home() {
         </section>
 
         <ComponentCardRecent
+          cartao="venda"
           tituloPrincipal="Novas Artes"
           LinkVerTodos="/"
           videosRecentes={novasArtes}
@@ -58,7 +63,8 @@ export default function Home() {
 
         <ComponentCardFeatured
           cartao="venda"
-          imagem={bannerMobile2}
+          imagem={banner2}
+          imagemMobile={bannerMobile2}
           descricao="Banner Nova arte"
           destaque="Nova arte"
           titulo="Only Zikas - Lagoa Dompa Club"
@@ -67,7 +73,7 @@ export default function Home() {
           visualizacao={Math.floor(Math.random() * 100 + 1)}
         />
 
-        <section className="secao">
+        <section className="secao secao__vendas">
           <h3 className="secao__titulo">Camisas mais recentes</h3>
 
           {camisas.map((atual) => (
@@ -82,6 +88,6 @@ export default function Home() {
           ))}
         </section>
       </main>
-    </>
+    </div>
   );
 }

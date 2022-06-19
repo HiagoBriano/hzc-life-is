@@ -3,82 +3,75 @@
   src: url(../../font/icones.ttf);
 }
 
-.cartao {
+.cartao-recente {
   width: 100%;
   border-radius: 15px;
   overflow: hidden;
   background-color: #2c343a;
 }
 
-.cartao__conteudo {
-  padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.cartao__titulo {
+.cartao-recente__titulo {
   font-size: 1.2rem;
   font-weight: 700;
   grid-column: span 2;
 }
 
-.cartao__perfil {
-  color: #95999c;
-  font-size: 0.9rem;
-  grid-column: span 2;
-}
+@media screen and (min-width: 1440px) {
+  .cartao-recente {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    row-gap: 24px;
+    width: 256px;
+    padding: 16px;
+    box-sizing: border-box;
+    align-self: flex-start;
+  }
 
-.cartao__info {
-  display: flex;
-  align-items: center;
-  color: #95999c;
-}
+  .cartao-recente__titulo {
+    grid-column: auto;
+  }
 
-.cartao__info--sifrao::before {
-  font-family: 'icones';
-  content: '\e905';
-  margin-right: 8px;
-}
+  .cartao-recente__link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0480dc;
+    justify-self: flex-end;
+  }
 
-.cartao__info--tempo::before {
-  font-family: 'icones';
-  content: '\e90c';
-  margin-right: 8px;
-}
+  .cartao-recente__lista {
+    display: grid;
+    row-gap: 16px;
+    grid-column: span 2;
+  }
 
-.cartao__info--visualizacao::before {
-  font-family: 'icones';
-  content: '\e90f';
-  margin-right: 8px;
-}
+  .cartao-recente__lista--item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+  }
 
-.cartao__botao {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0480dc;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  justify-self: flex-end;
-}
+  .cartao-recente__item--thumbnail {
+    width: 32px;
+    grid-row: span 2;
+  }
 
-.cartao__botao--carrinho::before {
-  font-family: 'icones';
-  content: '\e901';
-  font-size: 24px;
-}
+  .cartao-recente__item--titulo {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+  }
 
-.cartao__botao--play::before {
-  font-family: 'icones';
-  content: '\e90b';
-  font-size: 24px;
-}
+  .cartao-recente__item--perfil {
+    font-size: 0.8rem;
+    color: #95999c;
+  }
 
-.cartao__botao--pico::before {
-  font-family: 'icones';
-  content: '\e908';
-  font-size: 24px;
+  .cartao-recente__video {
+    grid-area: videos-recentes;
+  }
+
+  .cartao-recente__venda {
+    grid-area: vendas-recentes;
+  }
 }
